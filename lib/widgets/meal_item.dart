@@ -56,7 +56,13 @@ class MealItem extends StatelessWidget {
 		Navigator.of(context).pushNamed(
 			MealDetailScreen.routeName,
 			arguments: id,
-		);
+			//this can be used to get data 
+			//from when this page is popped
+		).then((result) => {
+			if (result != null) {
+				//removeItem(result)
+			}
+		});
 	}
 
 	@override
